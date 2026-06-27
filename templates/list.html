@@ -1,0 +1,19 @@
+<h2>アンケート一覧</h2>
+
+<table border="1">
+    <tr>
+        <th>ID</th>
+        <th>性別</th>
+        <th>年代</th>
+        <th>コメント</th>
+    </tr>
+
+    {% for row in data %}
+    <tr>
+        <td>{{ row[0] }}</td>
+        <td>{{ row[1] }}</td>
+        <td>{{ row[2] }}</td>
+        <td>{{ row[3] }}</td>
+    </tr>
+    {% endfor %}
+</table>

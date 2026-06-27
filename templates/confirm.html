@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>確認画面</title>
+</head>
+<body>
+
+<h1>入力内容の確認</h1>
+
+<p>性別：{{ gender }}</p>
+<p>年代：{{ age }}</p>
+<p>ご意見：{{ comment }}</p>
+
+<form method="POST" action="/thanks">
+    <input type="hidden" name="gender" value="{{ gender }}">
+    <input type="hidden" name="age" value="{{ age }}">
+    <input type="hidden" name="comment" value="{{ comment }}">
+    <button type="submit">送信する</button>
+</form>
+
+<form method="GET" action="/">
+    <button type="submit">修正する</button>
+</form>
+
+</body>
+</html>
